@@ -1,7 +1,7 @@
 {
   "atomCode": "html-report",
   "name": "Publish HTML report",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Publishes an HTML report directory from the workspace: archived with the build and viewable inline on the build page (the core of the htmlpublisher plugin).",
   "execution": {
     "packagePath": "html-report.jar",
