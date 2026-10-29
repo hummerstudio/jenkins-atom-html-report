@@ -1,0 +1,45 @@
+{
+  "atomCode": "html-report",
+  "name": "Publish HTML report",
+  "version": "1.1.0",
+  "description": "Publishes an HTML report directory from the workspace: archived with the build and viewable inline on the build page (the core of the htmlpublisher plugin).",
+  "execution": {
+    "packagePath": "html-report.jar",
+    "language": "java",
+    "target": "$atom_java_path -cp html-report.jar com.jenkinschina.atom.sdk.AtomRunner"
+  },
+  "input": {
+    "path": {
+      "label": "报告目录（workspace 相对路径，如 out/coverage）",
+      "type": "vuex-input",
+      "required": true
+    },
+    "index": {
+      "label": "入口文件（相对报告目录）",
+      "type": "vuex-input",
+      "default": "index.html"
+    },
+    "label": {
+      "label": "报告名称（构建页上显示）",
+      "type": "vuex-input",
+      "default": "HTML report"
+    },
+    "requireIndex": {
+      "label": "入口文件不存在就失败",
+      "type": "checkbox",
+      "default": "true"
+    }
+  },
+  "output": {
+    "report": {
+      "type": "report",
+      "description": "归档并在构建页内嵌的报告"
+    }
+  },
+  "x-jenkins": {
+    "protocol": "jenkins-1",
+    "requires": {
+      "runner": ">=0.3.0"
+    }
+  }
+}
