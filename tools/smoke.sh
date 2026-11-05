@@ -6,7 +6,7 @@ cd "$(dirname "$0")/.."
 export BUILD_NUMBER=7 JOB_NAME="$(basename "$PWD")-job"
 
 ./build.sh >/dev/null
-jar="$(cd dist/html-report && pwd)/html-report.jar"
+jar="$(cd dist/html && pwd)/html.jar"
 java_bin="${JAVA_HOME:+$JAVA_HOME/bin/}java"
 work="$(mktemp -d)"
 

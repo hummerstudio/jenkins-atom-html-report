@@ -1,12 +1,12 @@
 {
-  "atomCode": "html-report",
+  "atomCode": "html",
   "name": "Publish HTML report",
   "version": "1.2.0",
   "description": "Publishes an HTML report directory from the workspace: archived with the build and viewable inline on the build page (the core of the htmlpublisher plugin).",
   "execution": {
-    "packagePath": "html-report.jar",
+    "packagePath": "html.jar",
     "language": "java",
-    "target": "$atom_java_path -cp html-report.jar com.jenkinschina.atom.sdk.AtomRunner"
+    "target": "$atom_java_path -cp html.jar com.jenkinschina.atom.sdk.AtomRunner"
   },
   "input": {
     "path": {

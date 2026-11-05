@@ -1,4 +1,4 @@
-package com.jenkinschina.atom.htmlreport;
+package com.jenkinschina.atom.html;
 
 import com.jenkinschina.atom.sdk.AtomContext;
 import com.jenkinschina.atom.sdk.AtomResult;
@@ -14,7 +14,7 @@ import java.nio.file.Path;
  * the plugin's "publish HTML reports". The atom only decides which directory, and checks that it is really inside the
  * workspace and really has an entry point.
  */
-public class HtmlReportAtom implements AtomTask {
+public class HtmlAtom implements AtomTask {
 
     @Override
     public AtomResult run(AtomContext context) throws Exception {
@@ -49,7 +49,7 @@ public class HtmlReportAtom implements AtomTask {
         try (var walk = Files.walk(root)) {
             files = walk.filter(Files::isRegularFile).count();
         }
-        context.log("[html-report] " + label + ": " + root + " (" + files + " files, entry " + index + ")");
+        context.log("[html] " + label + ": " + root + " (" + files + " files, entry " + index + ")");
         return AtomResult.success().report("report", label, root.toString(), index);
     }
 }

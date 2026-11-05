@@ -34,9 +34,9 @@ mkdir -p "$classes/META-INF/services"
 cp src/main/resources/META-INF/services/* "$classes/META-INF/services/"
 ( cd "$sdk" && "$JAR" xf "$SDK_JAR" && rm -rf META-INF/MANIFEST.MF META-INF/services )
 
-rm -rf dist/html-report
-mkdir -p dist/html-report
-"$JAR" --create --file dist/html-report/html-report.jar -C "$classes" . -C "$sdk" .
-cp task.json dist/html-report/
-[ -f meta.json ] && cp meta.json dist/html-report/
-echo "built dist/html-report: $(ls dist/html-report | tr '\n' ' ')"
+rm -rf dist/html
+mkdir -p dist/html
+"$JAR" --create --file dist/html/html.jar -C "$classes" . -C "$sdk" .
+cp task.json dist/html/
+[ -f meta.json ] && cp meta.json dist/html/
+echo "built dist/html: $(ls dist/html | tr '\n' ' ')"
