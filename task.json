@@ -1,7 +1,7 @@
 {
   "atomCode": "html",
   "name": "Publish HTML report",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Publishes an HTML report directory from the workspace: archived with the build and viewable inline on the build page (the core of the htmlpublisher plugin).",
   "execution": {
     "packagePath": "html.jar",
@@ -39,7 +39,7 @@
   "x-jenkins": {
     "protocol": "jenkins-1",
     "requires": {
-      "runner": ">=0.3.0"
+      "runner": ">=0.4.0"
     }
   }
 }
